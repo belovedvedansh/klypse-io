@@ -1,0 +1,35 @@
+{
+  "name": "klypse-io",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Premium AI clipping platform for creators",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@klypse/web",
+    "dev:api": "turbo run dev --filter=@klypse/api",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "typecheck": "turbo run typecheck",
+    "db:generate": "turbo run db:generate --filter=@klypse/api",
+    "db:migrate": "turbo run db:migrate --filter=@klypse/api",
+    "db:studio": "turbo run db:studio --filter=@klypse/api",
+    "clean": "turbo run clean && rimraf node_modules"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "turbo": "^2.3.0",
+    "rimraf": "^6.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.8.0"
+}
