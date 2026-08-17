@@ -26,7 +26,7 @@
     "@prisma/client": "^6.19.3",
     "bullmq": "^5.25.0",
     "dotenv": "^16.4.0",
-    "drizzle-orm": "^0.35.0",
+    "drizzle-orm": "^0.45.2",
     "fastify": "^5.1.0",
     "ioredis": "^5.4.0",
     "jose": "^5.9.0",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.20.1",
-    "drizzle-kit": "^0.28.0",
+    "drizzle-kit": "^0.31.10",
     "prisma": "^6.19.3",
     "rimraf": "^6.0.0",
     "tsup": "^8.3.0",
