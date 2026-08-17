@@ -1,10 +1,11 @@
-import type { Config } from 'drizzle-kit';
+import { defineConfig } from 'drizzle-kit';
 
-export default {
-  schema: './src/db/schema/index.ts',
+export default defineConfig({
+  // Use a glob pattern or exact relative path
+  schema: './src/db/schema/*.ts',
   out: './src/db/migrations',
   dialect: 'postgresql',
   dbCredentials: {
     url: process.env.DATABASE_URL!,
   },
-} satisfies Config;
+});
