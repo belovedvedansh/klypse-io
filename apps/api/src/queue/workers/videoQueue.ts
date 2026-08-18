@@ -14,9 +14,9 @@
 
 import { Queue, Worker, Job, QueueEvents } from 'bullmq';
 import { eq } from 'drizzle-orm';
-import { db } from '../db/index.js';
-import { processingJobs, projects } from '../db/schema/index.js';
-import { logger } from '../utils/logger.js';
+import { db } from '../../db/index.js';
+import { jobs } from '../../db/schema/index.js';
+import { logger } from '../../utils/logger.js';
 
 // ─── Types ───────────────────────────────────────────────
 
