@@ -2,7 +2,7 @@ import { FastifyInstance } from 'fastify';
 import { eq, and, desc } from 'drizzle-orm';
 import { db } from '../../db/index.js';
 import { clipCandidates, processingJobs } from '../../db/schema/index.js';
-import { enqueueVideoJob } from '../../queue/workers/videoQueue.js';
+import { enqueueVideoJob } from '../../queues/workers/videoQueue.js';
 import { AppError } from '../../utils/errors.js';
 
 interface ExportBody {
