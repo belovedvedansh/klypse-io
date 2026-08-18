@@ -100,10 +100,10 @@ export async function buildApp() {
   app.setErrorHandler((error, request, reply) => {
     logger.error({ err: error, url: request.url, method: request.method }, 'Request error');
 
-    const statusCode = error.statusCode ?? 500;
+    const statusCode = (error as any).statusCode ?? 500;
     reply.status(statusCode).send({
       error: {
-        message: statusCode === 500 ? 'Internal server error' : error.message,
+        message: statusCode === 500 ? 'Internal server error' : (error as any).message,
         code: (error as any).code ?? 'INTERNAL_ERROR',
         statusCode,
       },
